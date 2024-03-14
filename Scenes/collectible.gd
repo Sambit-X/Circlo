@@ -1,8 +1,8 @@
-extends Area2D
+extends StaticBody2D
 
-@onready var game_manager = %"Game Manager"
+@onready var circlo = $"../circlo"
 
 func _on_body_entered(body):
 	# Check if the colliding body has the name "CharacterBody2D"
-	if body.name == "circlo":
+	if body.name == circlo:
 		queue_free()
